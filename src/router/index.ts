@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import {createRouter, createWebHistory} from "vue-router";
 
 
 const routes = [
@@ -65,6 +65,21 @@ const routes = [
                 name: 'person-face',
                 component: () => import("@/views/person/Face.vue"),
                 meta:{ title:"人脸采集",icon:"Guide",show:false ,useFrame:true},
+            },  {
+                path: '/charts',
+                name: 'charts',
+                component: () => import("@/views/charts/Index.vue"),
+                meta:{ title:"仪表盘" ,icon:"User",show:true,useFrame:true},
+                children: [
+                    {
+                        path: '/charts/heatmap',
+                        name: 'charts-heatmap',
+                        component: () => import("@/views/charts/HeatMap.vue"),
+                        meta:{ title:"热力图",icon:"CirclePlus" ,show:true,useFrame:true},
+                    },
+
+
+                ]
             },
 
         ]
