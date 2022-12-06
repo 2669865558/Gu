@@ -24,6 +24,11 @@ export default defineConfig({
                 target: "http://127.0.0.1:8081/",
                 changeOrigin: true,
             },
+            "/face-api": {
+                target: "http://127.0.0.1:8082/",
+                changeOrigin: true,
+
+            },
 
         },
     },

@@ -44,10 +44,10 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, reactive } from 'vue'
-import { personApi, venueApi } from "@/api/index"
-import { useRouter, useRoute } from 'vue-router'
-import { ElMessageBox } from 'element-plus'
+import {onMounted, reactive, ref} from 'vue'
+import {personApi, venueApi} from "@/api/index"
+import {useRoute, useRouter} from 'vue-router'
+import {ElMessageBox} from 'element-plus'
 
 const router = useRouter()  //带r的是负责页面跳转
 const route = useRoute()   //不带r的是获取当前页面url的相关参数
@@ -74,6 +74,7 @@ onMounted(() => {
     callVenueApi()
     onSubmit()
 })
+
 const callVenueApi = () => {
 
     venueApi.select.call().then((res: any) => {

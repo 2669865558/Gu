@@ -1,4 +1,4 @@
-import http  from "@/http/index"
+import http from "@/http/index"
 
 
 export default{
@@ -16,6 +16,14 @@ export default{
         url:"/yunji-api/person/update",
         call: async function (params:any ={}) {
             return await http.put(this.url,params)
+
+        }
+    },
+    updateFaceFlag:{
+        name:"更新采集信息",
+        url:"/yunji-api/person/update/faceflag",
+        call: async function (params:any ={}) {
+            return await http.get(this.url,params)
 
         }
     },
